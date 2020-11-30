@@ -1,0 +1,32 @@
+.megamenu {
+    position: static;
+}
+
+.megamenu .dropdown-menu {
+    background: none;
+    border: none;
+    width: 100%
+}
+
+.text-uppercase {
+    letter-spacing: 0.08em;
+}
+
+.btn {
+    transition: 1s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #915f1a;
+}
+.dropdown-item {
+    transition: 0.5s ease-in-out;
+}
+.dropdown-item:hover, .dropdown-item:focus {
+    color: #16181b;
+    text-decoration: none;
+    background-color: #E7E8A6;
+}
+.rotate:hover {
+    transform: rotate(-15deg)
+}
