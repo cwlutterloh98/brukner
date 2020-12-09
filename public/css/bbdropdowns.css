@@ -1,0 +1,123 @@
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.bb-dropdowns li ul li:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+.nav.bb-dropdowns > li, .navbar-nav.bb-dropdowns > li {
+  text-align: center;
+
+}
+
+.nav.bb-dropdowns > li ul li, .navbar-nav.bb-dropdowns > li ul li {
+  text-align: left;
+}
+
+.bb-dropdowns a[aria-checked="true"]:before {
+  content: '\2713';
+  margin-right: .5em;
+}
+
+.bb-dropdowns li ul li a:hover, .bb-dropdowns li ul li a:focus {
+  transition: 0.3s ease-in-out;
+  background-color: #E7E8A6;
+  color: #232323 !important;
+  text-decoration: none;
+}
+
+.bb-dropdowns li ul li a {
+  color: #232323 !important;
+  padding: 0.5rem 1rem !important;
+  display: block;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  border: 0;
+}
+
+.bb-dropdowns a + ul {
+  position: absolute;
+  display: none;
+  margin: 0;
+  padding: 0;
+  left: 15px;
+  right: 15px;
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  transform-origin: top;
+  animation-name: fadeInScale;
+  animation-duration: 0.25s;
+  min-width: 160px;
+}
+
+body.no-js .bb-dropdowns li > a:not([data-clickonly="true"]):hover + ul, body.no-js .bb-dropdowns ul:hover, .bb-dropdowns a[aria-haspopup="true"] + [aria-hidden="false"] {
+  display: block;
+}
+
+.bb-dropdowns {
+  padding: 0;
+}
+
+.bb-dropdowns li {
+  list-style-type: none;
+}
+
+.bb-dropdowns [aria-expanded="true"] {
+  position: relative;
+}
+
+.bb-dropdowns .btn[aria-expanded="true"]:before {
+  bottom: -1px;
+}
+
+.bb-dropdowns a.btn-lg + ul {
+  font-size: 1.25rem;
+}
+
+.bb-dropdowns [aria-expanded="true"]:before {
+  animation-name: fadeInScale;
+  animation-duration: 0.25s;
+  content: '';
+  display: block;
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 1em);
+  width: 0;
+  height: 0;
+  background: transparent !important;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+  z-index: 1001;
+}
+
+@media (min-width: 767px) {
+  .bb-dropdowns > li {
+    text-align: left;
+    display: inline-block;
+  }
+  .bb-dropdowns a + ul {
+    left: auto;
+    right: auto;
+  }
+}

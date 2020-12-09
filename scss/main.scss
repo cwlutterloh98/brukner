@@ -1,0 +1,19 @@
+// Custom.scss
+// Option B: Include parts of Bootstrap
+
+// Override theme colors
+$theme-colors: (
+  "primary": #5C6B28,
+  "secondary": #E7E8A6,
+  "success": #46591D,
+  "warning": #DA9432,
+  "info": #5478A1,
+  "dark": #151C15
+);
+
+// Override link colors
+$link-color: #5478A1;
+$font-family-sans-serif:      'Poppins',-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+// Bootstrap and its default variables
+@import "../node_modules/bootstrap/scss/bootstrap";
